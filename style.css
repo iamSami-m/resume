@@ -1,0 +1,304 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+header{
+  width: 100%;
+  height: 100vh;
+  
+  background-color: #222;
+  color: whitesmoke;
+  
+}
+header nav .navlist{
+  padding-top: 50px;
+  
+}
+header nav .navlist{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
+  letter-spacing: 2px;
+}
+
+
+header nav .navlist a{
+  width: 100px;
+  color: whitesmoke;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navlist li a::after{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  transform: translate(0px,18px);
+  background: #8067f0eb;
+  transition: ease .40s;
+}
+.navlist a:hover::after{
+  content: '';
+  position: absolute;
+ 
+  width: 8%;
+  height: 2px;
+
+  background: #8067f0eb;
+  transition: ease .40s;
+}
+header .intro{
+  position: absolute;
+  letter-spacing: 3px;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  
+}
+
+header .intro h2{
+  font-size: 20px;
+  
+  animation: anim 3s;
+  transition: ease-in-out;
+}
+header .intro h2>span{
+  font-size: 70px;
+  letter-spacing: 8px;
+  color: #8067f0eb;
+}
+@keyframes anim {
+  0%{
+    transform: translatey(-500px);
+  }
+  100%{
+    transform: translatey(0px);
+  }
+}
+
+header .intro p{
+  font-size: 50px;
+  animation-name: animp;
+  animation-duration: 3s;
+
+
+}
+@keyframes animp {
+  0%{
+    transform: translatex(400px);
+   
+  }
+  100%{
+    transform: translatex(0px);
+   
+  }
+}
+.works{
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.works .cards{
+  margin-top: 80px;
+  width: 1200px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap:9px;
+  
+}
+.works .cards .card{
+ 
+ margin-left: 20px;
+}
+.works .cards .card img{
+  width: 250px;
+  height: 300px;
+  border: 4px solid #5634eeeb;
+ border-radius: 20px;
+ box-shadow: 0 0 20px 5px #8067f0eb;
+  
+  transition: .5s ease-in-out;
+}
+.works .cards .card img:hover{
+  transform: scale(1.1);
+}
+.contact{
+  position: relative;
+  display: flex;
+  margin: 60px;
+  height: 50vh;
+
+}
+.contact form{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  background: #8067f0eb;
+  transform: translate(-50%,-50%);
+  padding: 20px;
+  border-radius: 10px;
+  
+}
+
+
+.contact form #Email{
+  width: 700px;
+  height: 40px;
+  border-radius: 15px;
+  margin-left: 25px;
+  padding: 0px 25px;
+  font-size: 15px;
+  font-style: italic;
+  border: 2px solid #222;
+}
+.contact form #Text{
+  margin-top: 10px;
+  width: 700px;
+  height: 150px;
+  margin-left: 25px;
+  border-radius: 15px;
+  border: 2px solid #222;
+}
+.contact form input[type="submit"]{
+  
+  padding: 12px 50px;
+  font-size: 15px;
+  font-weight: bold;
+  background: #f75023;
+  color:#ffffff;
+  border: 2px solid #222;
+  margin: 15px 0px 0px 25px;
+  border-radius: 30px;
+  transition: .5s ease-in-out;
+}
+.contact form input[type="submit"]:hover{
+  color: #8067f0eb;
+  background-color: whitesmoke;
+}
+.scroll-line{
+  display: flex;
+  justify-content: center;
+  background-color: #8067f0eb;
+  height: 5px;
+  border-radius: 20px;
+  margin: 0px 120px;
+
+}
+
+.scroll-line .scroll{
+  position: absolute;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%,-30px);
+  border-radius: 50%;
+  z-index: 1;
+  background: #41337d;
+}
+.scroll a{
+  position: inherit;
+  font-size: 20px;
+  transform: translate(15px,15px);
+}
+footer{
+  position: relative;
+  padding: 40px;
+  height: 50px;
+}
+footer .socials ul{
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+
+}
+footer .socials ul li{
+  list-style: none;
+  margin-left: 20px;
+  font-size: 30px;
+}
+footer .socials a {
+  
+  
+   
+}
+@media screen and (max-width:1000px){
+  .contact form #Email {
+    width: 500px;
+    height: 40px;
+   
+  }
+  .contact form #Text{
+
+    width: 500px;
+    height: 150px;
+    
+  }
+}
+@media screen and (max-width:600px){
+  .contact form #Email {
+    width: 300px;
+    height: 40px;
+   
+  }
+  .contact form #Text{
+
+    width: 300px;
+    height: 150px;
+    
+  }
+  header nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    letter-spacing: 3px;
+    animation-name: mobnav;
+    animation-duration: 3s;
+  }
+  @keyframes mobnav {
+    0%{
+      transform: translate(0,-100%);
+    }
+    100%{
+      transform: translate(0%,10%);
+    }
+  }
+  header nav .navlist{
+    padding-top: 30px;
+
+    
+  }
+  header nav .navlist{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  header nav .navlist li{
+    margin: 5px 0;
+  }
+  header nav .navlist a{
+    font-size: 12px;
+    padding: 8px 80px;
+    border-right: 2px solid #8067f0eb;
+    border-left: 2px solid #8067f0eb;
+  }
+ 
+}
